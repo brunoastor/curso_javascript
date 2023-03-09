@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientação a Objetos</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Orientação a Objetos</h1>
+    <p>A Orientação a Objetos em JavaScript é uma técnica de programação que permite criar objetos que possuem propriedades e métodos, permitindo a organização e reutilização de código de forma mais eficiente.
+
+        Em JavaScript, objetos são criados a partir de funções construtoras ou de classes (introduzidas na versão ES6 do JavaScript). Por exemplo, podemos criar um objeto "Pessoa" com uma função construtora assim:</p>
+        <code><pre>
+            function Pessoa(nome, idade) {
+            this.nome = nome;
+            this.idade = idade;
+            
+            this.falar = function() {
+              console.log("Oi, meu nome é " + this.nome + " e eu tenho " + this.idade + " anos.");
+            }
+          }
+          </pre></code>
+    <p>Aqui, a função construtora "Pessoa" recebe dois parâmetros, "nome" e "idade", que são atribuídos como propriedades do objeto usando a palavra-chave "this". A função também define um método "falar" que imprime uma mensagem usando as propriedades "nome" e "idade".
+
+        Para criar um objeto "Pessoa" com essa função construtora, podemos fazer assim:</p>
+        <code><pre>
+            var pessoa1 = new Pessoa("João", 25);
+            pessoa1.falar(); // Oi, meu nome é João e eu tenho 25 anos.
+            </pre></code>
+    <p>No exemplo acima, criamos uma nova instância do objeto "Pessoa" usando a palavra-chave "new" e passando os parâmetros "João" e 25. Em seguida, chamamos o método "falar" da instância "pessoa1".
+
+        Outra forma de criar objetos em JavaScript é usando classes, que foram introduzidas na versão ES6. O exemplo acima poderia ser reescrito assim:</p>
+        <code><pre>
+            class Pessoa {
+            constructor(nome, idade) {
+              this.nome = nome;
+              this.idade = idade;
+            }
+            
+            falar() {
+              console.log("Oi, meu nome é " + this.nome + " e eu tenho " + this.idade + " anos.");
+            }
+          }
+          </pre></code>
+    <p>Nesse caso, definimos a classe "Pessoa" com um construtor que recebe os parâmetros "nome" e "idade" e atribui as propriedades correspondentes. Também definimos o método "falar" diretamente na classe.
+
+        Para criar um objeto "Pessoa" usando uma classe, podemos fazer assim:</p>
+        <code><pre>
+            var pessoa1 = new Pessoa("João", 25);
+            pessoa1.falar(); // Oi, meu nome é João e eu tenho 25 anos.
+        </pre></code>
+    <p>
+        Os conceitos fundamentais da Orientação a Objetos em JavaScript são: encapsulamento, herança e polimorfismo. O encapsulamento é a capacidade de proteger os dados dentro de um objeto, permitindo que eles sejam acessados somente por métodos dentro do objeto. A herança permite que um objeto "herde" propriedades e métodos de um objeto pai, criando uma hierarquia de objetos. O polimorfismo permite que objetos com diferentes tipos e estruturas possam ser tratados de forma semelhante, simplificando o código e tornando-o mais flexível.
+    </p>
+    
+</body>
+</html>
