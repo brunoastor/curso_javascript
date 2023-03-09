@@ -1,12 +1,12 @@
-const Carro = {
-    buzina: 'bip bip',
+class Carro{
+    constructor(marca){
+        this.marca = marca
+    }
     buzinar() {
-        console.log(this.buzina)
+        console.log('bip bip')
     }
 }
 
-var fiat = Carro
+var fiat = new Carro('fiat')
 
 fiat.buzinar()
-
-console.log(Carro)

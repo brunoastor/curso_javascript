@@ -1,4 +1,4 @@
-class Pessoa{
+class PessoaFisica{
     constructor(nome){
         this.nome = nome
     }
@@ -8,5 +8,16 @@ class Pessoa{
     }
 }
 
-const joca = new Pessoa('Joca')
+const joca = new PessoaFisica('Joca')
 joca.falar()
+
+function PessoaJuridica(nome){
+    this.nome = nome
+
+    this.falar = function() {
+        console.log(`Olá, meu nome é ${this.nome}`)
+    }
+}
+
+const maria = new PessoaJuridica('Maria');
+maria.falar();
